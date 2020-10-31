@@ -96,3 +96,11 @@ C:\Users\Caty\Desktop\UPC\2B-3A\SO\Proyecto\Individual\cliente_con_conexion_desc
 C:\Users\Caty\Desktop\UPC\2B-3A\SO\Proyecto\Individual\cliente_con_conexion_desconexion\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.Form1.resources
 C:\Users\Caty\Desktop\UPC\2B-3A\SO\Proyecto\Individual\cliente_con_conexion_desconexion\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.Properties.Resources.resources
 C:\Users\Caty\Desktop\UPC\2B-3A\SO\Proyecto\Individual\cliente_con_conexion_desconexion\WindowsFormsApplication1\obj\Debug\clienteForm.csproj.GenerateResource.Cache
+C:\Users\Caty\Desktop\UPC\2B-3A\SO\Proyecto\Individual\cliente\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.exe
+C:\Users\Caty\Desktop\UPC\2B-3A\SO\Proyecto\Individual\cliente\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.pdb
+C:\Users\Caty\Desktop\UPC\2B-3A\SO\Proyecto\Individual\cliente\WindowsFormsApplication1\bin\Debug\WindowsFormsApplication1.exe
+C:\Users\Caty\Desktop\UPC\2B-3A\SO\Proyecto\Individual\cliente\WindowsFormsApplication1\bin\Debug\WindowsFormsApplication1.pdb
+C:\Users\Caty\Desktop\UPC\2B-3A\SO\Proyecto\Individual\cliente\WindowsFormsApplication1\obj\Debug\clienteForm.csprojResolveAssemblyReference.cache
+C:\Users\Caty\Desktop\UPC\2B-3A\SO\Proyecto\Individual\cliente\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.Form1.resources
+C:\Users\Caty\Desktop\UPC\2B-3A\SO\Proyecto\Individual\cliente\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.Properties.Resources.resources
+C:\Users\Caty\Desktop\UPC\2B-3A\SO\Proyecto\Individual\cliente\WindowsFormsApplication1\obj\Debug\clienteForm.csproj.GenerateResource.Cache

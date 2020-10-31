@@ -33,14 +33,14 @@
             this.button1 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.mayusculas = new System.Windows.Forms.RadioButton();
+            this.palindromo = new System.Windows.Forms.RadioButton();
             this.Longitud = new System.Windows.Forms.RadioButton();
             this.altura = new System.Windows.Forms.RadioButton();
             this.label3 = new System.Windows.Forms.Label();
             this.alturaBox = new System.Windows.Forms.TextBox();
             this.Bonito = new System.Windows.Forms.RadioButton();
             this.button3 = new System.Windows.Forms.Button();
-            this.palindromo = new System.Windows.Forms.RadioButton();
-            this.mayusculas = new System.Windows.Forms.RadioButton();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -109,7 +109,31 @@
             this.groupBox1.Size = new System.Drawing.Size(363, 313);
             this.groupBox1.TabIndex = 6;
             this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "Peticion";
+            this.groupBox1.Text = "Peticiones";
+            // 
+            // mayusculas
+            // 
+            this.mayusculas.AutoSize = true;
+            this.mayusculas.Font = new System.Drawing.Font("Times New Roman", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.mayusculas.Location = new System.Drawing.Point(94, 223);
+            this.mayusculas.Name = "mayusculas";
+            this.mayusculas.Size = new System.Drawing.Size(198, 19);
+            this.mayusculas.TabIndex = 11;
+            this.mayusculas.TabStop = true;
+            this.mayusculas.Text = "Dime mi nombre en mayusculas";
+            this.mayusculas.UseVisualStyleBackColor = true;
+            // 
+            // palindromo
+            // 
+            this.palindromo.AutoSize = true;
+            this.palindromo.Font = new System.Drawing.Font("Times New Roman", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.palindromo.Location = new System.Drawing.Point(94, 198);
+            this.palindromo.Name = "palindromo";
+            this.palindromo.Size = new System.Drawing.Size(207, 19);
+            this.palindromo.TabIndex = 10;
+            this.palindromo.TabStop = true;
+            this.palindromo.Text = "Dime si mi nombre es palindromo";
+            this.palindromo.UseVisualStyleBackColor = true;
             // 
             // Longitud
             // 
@@ -179,30 +203,6 @@
             this.button3.Text = "Desconectar";
             this.button3.UseVisualStyleBackColor = true;
             this.button3.Click += new System.EventHandler(this.button3_Click);
-            // 
-            // palindromo
-            // 
-            this.palindromo.AutoSize = true;
-            this.palindromo.Font = new System.Drawing.Font("Times New Roman", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.palindromo.Location = new System.Drawing.Point(94, 198);
-            this.palindromo.Name = "palindromo";
-            this.palindromo.Size = new System.Drawing.Size(207, 19);
-            this.palindromo.TabIndex = 10;
-            this.palindromo.TabStop = true;
-            this.palindromo.Text = "Dime si mi nombre es palindromo";
-            this.palindromo.UseVisualStyleBackColor = true;
-            // 
-            // mayusculas
-            // 
-            this.mayusculas.AutoSize = true;
-            this.mayusculas.Font = new System.Drawing.Font("Times New Roman", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.mayusculas.Location = new System.Drawing.Point(94, 223);
-            this.mayusculas.Name = "mayusculas";
-            this.mayusculas.Size = new System.Drawing.Size(198, 19);
-            this.mayusculas.TabIndex = 11;
-            this.mayusculas.TabStop = true;
-            this.mayusculas.Text = "Dime mi nombre en mayusculas";
-            this.mayusculas.UseVisualStyleBackColor = true;
             // 
             // Form1
             // 
