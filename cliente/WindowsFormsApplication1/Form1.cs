@@ -13,7 +13,9 @@ namespace WindowsFormsApplication1
 {
     public partial class Form1 : Form
     {
+        string ListaConectados;
         Socket server;
+
         public Form1()
         {
             InitializeComponent();
@@ -22,7 +24,6 @@ namespace WindowsFormsApplication1
         private void Form1_Load(object sender, EventArgs e)
         {
 
-           
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -48,7 +49,11 @@ namespace WindowsFormsApplication1
                 MessageBox.Show("No he podido conectar con el servidor");
                 return;
             }
-
+            this.BackColor = Color.Lavender;
+            string mensaje = "4444/" + nombre.Text;
+            // Enviamos al servidor el nombre tecleado
+            byte[] msg = System.Text.Encoding.ASCII.GetBytes(mensaje);
+            server.Send(msg);
         }
 
         private void button2_Click(object sender, EventArgs e)
@@ -128,27 +133,74 @@ namespace WindowsFormsApplication1
                 server.Receive(msg2);
                 mensaje = Encoding.ASCII.GetString(msg2).Split('\0')[0];
                 MessageBox.Show(mensaje);
-            }
-             
-        
+            }   
         }
 
         private void button3_Click(object sender, EventArgs e)
         {
             //Mensaje de desconexión
-            string mensaje = "0/";
+            string mensaje = "10/";
         
             byte[] msg = System.Text.Encoding.ASCII.GetBytes(mensaje);
             server.Send(msg);
 
             // Nos desconectamos
-            this.BackColor = Color.Lavender;
             server.Shutdown(SocketShutdown.Both);
             server.Close();
-
-
+            Close();
         }
 
-     
+        private void button4_Click(object sender, EventArgs e)
+        {
+            string mensaje = "27/listaconectados";
+
+            // Enviamos al servidor el nombre tecleado
+            byte[] msg = System.Text.Encoding.ASCII.GetBytes(mensaje);
+            server.Send(msg);
+
+            //Recibimos la respuesta del servidor
+            byte[] msg2 = new byte[80];
+            server.Receive(msg2);
+            ListaConectados = Encoding.ASCII.GetString(msg2).Split('\0')[0];
+
+            string[] vector = new string[5];
+            vector = ListaConectados.Split(',');
+
+            Conectados.RowHeadersVisible = false;
+            Conectados.ColumnHeadersVisible = false;
+            Conectados.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.AllCells;
+            Conectados.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            Conectados.RowCount = vector.Length;
+            Conectados.ColumnCount = 1;
+
+            int i = 0;
+            while (i < vector.Length)
+            {
+                if (i == 0)
+                {
+                    Conectados.Rows[i].Cells[0].Value = "Total: " + vector[i];
+                }
+                else
+                {
+                    Conectados.Rows[i].Cells[0].Value = vector[i];
+                }
+                i++;
+            }
+        }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+                // Pedir numero de srevicios realizados
+                string mensaje = "6/numservicios";
+
+                byte[] msg = System.Text.Encoding.ASCII.GetBytes(mensaje);
+                server.Send(msg);
+
+                //Recibimos la respuesta del servidor
+                byte[] msg2 = new byte[80];
+                server.Receive(msg2);
+                mensaje = Encoding.ASCII.GetString(msg2).Split('\0')[0];
+                servicios_rec.Text = "Número total de servicios: " + mensaje;
+        }
     }
 }
